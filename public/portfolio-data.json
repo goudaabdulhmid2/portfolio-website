@@ -11,13 +11,60 @@
   },
   "summary": "Backend-focused full-stack engineer and former ICPC community leader. Graduated with Honors in Computer and Control Systems Engineering and completed ITI's 9-month full-stack program, building scalable REST APIs and multi-role web applications across Node.js, Django, and Laravel.",
   "skills": {
-    "Programming Languages": ["JavaScript", "TypeScript", "Python", "PHP", "C++", "Java"],
-    "Backend": ["Node.js", "Express.js", "NestJS", "Django", "Laravel", "RESTful APIs", "GraphQL"],
-    "Frontend": ["HTML", "CSS", "Tailwind CSS", "Bootstrap", "Vue.js", "React", "Next.js", "Angular"],
-    "Databases and ORMs": ["MongoDB", "MySQL", "Redis", "Prisma", "Mongoose", "Eloquent"],
-    "Tools": ["Git", "GitHub", "Postman", "Docker", "Linux", "Bash"],
-    "Concepts": ["Data Structures and Algorithms", "OOP", "Design Patterns", "Agile"],
-    "AI and ML": ["Prompt Engineering", "RAG", "AI API Integration"]
+    "Programming Languages": [
+      "JavaScript",
+      "TypeScript",
+      "Python",
+      "PHP",
+      "C++",
+      "Java"
+    ],
+    "Backend": [
+      "Node.js",
+      "Express.js",
+      "NestJS",
+      "Django",
+      "Laravel",
+      "RESTful APIs",
+      "GraphQL"
+    ],
+    "Frontend": [
+      "HTML",
+      "CSS",
+      "Tailwind CSS",
+      "Bootstrap",
+      "Vue.js",
+      "React",
+      "Next.js",
+      "Angular"
+    ],
+    "Databases and ORMs": [
+      "MongoDB",
+      "MySQL",
+      "Redis",
+      "Prisma",
+      "Mongoose",
+      "Eloquent"
+    ],
+    "Tools": [
+      "Git",
+      "GitHub",
+      "Postman",
+      "Docker",
+      "Linux",
+      "Bash"
+    ],
+    "Concepts": [
+      "Data Structures and Algorithms",
+      "OOP",
+      "Design Patterns",
+      "Agile"
+    ],
+    "AI and ML": [
+      "Prompt Engineering",
+      "RAG",
+      "AI API Integration"
+    ]
   },
   "experience": [
     {
@@ -56,94 +103,151 @@
   "projects": [
     {
       "title": "Clinic Scheduling Management System",
-      "techStack": ["Vue.js", "Django REST Framework", "JWT", "MySQL"],
+      "techStack": [
+        "Vue.js",
+        "Django REST Framework",
+        "JWT",
+        "MySQL"
+      ],
       "description": "Built a full-stack healthcare application supporting appointment booking for 3+ user roles (patient, doctor, admin). Implemented real-time physician availability tracking, reducing scheduling conflicts by design.",
       "github": "https://github.com/goudaabdulhmid2/clinic_appointment_system",
-      "image": "https://picsum.photos/seed/clinic/600/400"
+      "image": "/projects/Clinic Scheduling Management System.png"
     },
     {
       "title": "Node.js Authentication System with 2FA",
-      "techStack": ["Node.js", "Express.js", "MongoDB", "Passport.js", "JWT"],
+      "techStack": [
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Passport.js",
+        "JWT"
+      ],
       "description": "Architected a secure authentication system supporting JWT, OAuth 2.0, TOTP-based 2FA, and social login. Built email and SMS verification flows covering registration, password recovery, and account management.",
       "github": "https://github.com/goudaabdulhmid2/node-user-auth--2fa",
-      "image": "https://picsum.photos/seed/auth/600/400"
+      "image": "/projects/Node.js Authentication System with 2FA.png"
     },
     {
       "title": "E-Commerce Platform API",
-      "techStack": ["Node.js", "Express.js", "MongoDB", "Stripe", "Nodemailer"],
+      "techStack": [
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Stripe",
+        "Nodemailer"
+      ],
       "description": "Developed a production-ready REST API handling user authentication, product management, and order processing. Integrated Stripe payment gateway and Nodemailer for transactional emails.",
       "github": "https://github.com/goudaabdulhmid2/E-commerce-online-shopping",
-      "image": "https://picsum.photos/seed/ecommerce/600/400"
+      "image": "/projects/e-commerce-api.png"
     },
     {
       "title": "Hotel Management System",
-      "techStack": ["Laravel", "Vue.js", "MySQL", "Tailwind CSS"],
+      "techStack": [
+        "Laravel",
+        "Vue.js",
+        "MySQL",
+        "Tailwind CSS"
+      ],
       "description": "Delivered a full-stack hospitality platform covering room management, reservation workflows, and admin controls. Achieved a fully responsive UI using Tailwind CSS and ShadCN.",
       "github": "https://github.com/goudaabdulhmid2/Cordoba",
-      "image": "https://picsum.photos/seed/hotel/600/400"
+      "image": "/projects/Hotel Mangment.png"
     },
     {
       "title": "RAG-Powered Document Q&A Platform",
-      "techStack": ["FastAPI", "LangChain", "OpenAI", "MongoDB", "React", "Vite"],
+      "techStack": [
+        "FastAPI",
+        "LangChain",
+        "OpenAI",
+        "MongoDB",
+        "React",
+        "Vite"
+      ],
       "description": "Built a full-stack RAG pipeline for uploading PDF/DOCX/TXT documents and querying them via natural language, powered by LangChain orchestration and OpenAI embeddings.",
       "github": "https://github.com/goudaabdulhmid2/Chat-with-Your-Files-RAG",
-      "image": "https://picsum.photos/seed/rag/600/400"
+      "image": "/projects/Rag.png"
     },
     {
       "title": "Eventify Event Management System",
-      "techStack": ["JavaScript", "Full-Stack"],
+      "techStack": [
+        "JavaScript",
+        "Full-Stack"
+      ],
       "description": "A comprehensive event management system designed to streamline event planning, organization, and ticketing.",
       "github": "https://github.com/goudaabdulhmid2/Eventify-Event-Management-System",
-      "image": "https://picsum.photos/seed/eventify/600/400"
+      "image": "/projects/Eventify Event Management System.png"
     },
     {
       "title": "Animal Expert Quiz",
-      "techStack": ["Prolog", "AI"],
+      "techStack": [
+        "Prolog",
+        "AI"
+      ],
       "description": "An interactive animal expert quiz system designed to guess the animal the user is thinking of using rules.",
       "github": "https://github.com/goudaabdulhmid2/-Animal-Expert-Quiz-",
-      "image": "https://picsum.photos/seed/animal/600/400"
+      "image": "/projects/animalQuiz.jpg"
     },
     {
       "title": "Online Library Management System",
-      "techStack": ["PHP", "MySQL", "Web"],
+      "techStack": [
+        "PHP",
+        "MySQL",
+        "Web"
+      ],
       "description": "A digital library management system to manage books, users, and borrowing transactions efficiently.",
       "github": "https://github.com/goudaabdulhmid2/Online-library-Management-System",
-      "image": "https://picsum.photos/seed/library/600/400"
+      "image": "/projects/libarery managment.png"
     },
     {
       "title": "Task Manager (Angular)",
-      "techStack": ["Angular", "TypeScript", "RxJS"],
+      "techStack": [
+        "Angular",
+        "TypeScript",
+        "RxJS"
+      ],
       "description": "A frontend task management application built with Angular, offering robust task tracking and state management.",
       "github": "https://github.com/goudaabdulhmid2/task-manager-angular",
-      "image": "https://picsum.photos/seed/taskmanager/600/400"
+      "image": "/projects/task manager.png"
     },
     {
       "title": "n8n Automations",
-      "techStack": ["n8n", "Workflow Automation"],
+      "techStack": [
+        "n8n",
+        "Workflow Automation"
+      ],
       "description": "Custom workflows and automations built using n8n for integrating various APIs and streamlining processes.",
       "github": "https://github.com/goudaabdulhmid2/n8n",
-      "image": "https://picsum.photos/seed/n8n/600/400"
+      "image": "/projects/n8n.png"
     },
     {
       "title": "Cafeteria Project PHP",
-      "techStack": ["PHP", "MySQL", "Bootstrap"],
+      "techStack": [
+        "PHP",
+        "MySQL",
+        "Bootstrap"
+      ],
       "description": "A cafeteria management system for managing orders, products, and users built natively with PHP and MySQL.",
       "github": "https://github.com/goudaabdulhmid2/cafeteria_project_php",
-      "image": "https://picsum.photos/seed/cafeteria/600/400"
+      "image": "/projects/cafeteria.jpg"
     },
     {
       "title": "Bash DBMS Project",
-      "techStack": ["Bash", "Linux"],
+      "techStack": [
+        "Bash",
+        "Linux"
+      ],
       "description": "A simple Database Management System implemented entirely in Bash scripting. It handles table creation, inserts, selects, and drops.",
       "github": "https://github.com/goudaabdulhmid2/Bash-DBMS-Project",
-      "image": "https://picsum.photos/seed/bash/600/400"
+      "image": "/projects/bash.png"
     },
     {
       "title": "Desktop Automation Based Icon Grounding",
-      "techStack": ["Python", "Automation", "Computer Vision"],
+      "techStack": [
+        "Python",
+        "Automation",
+        "Computer Vision"
+      ],
       "description": "An intelligent desktop automation tool that interacts with UI elements based on icon grounding and computer vision techniques.",
       "github": "https://github.com/goudaabdulhmid2/Desktop-Automation-Based-Icon-Grounding",
-      "image": "https://picsum.photos/seed/automation/600/400"
+      "image": "/projects/desktop automatiom.png"
     }
   ],
   "activities": [
@@ -171,9 +275,21 @@
     "Solved 500+ problems on Codeforces and Vjudge; also active on LeetCode"
   ],
   "competitiveProfiles": [
-    { "name": "Codeforces", "url": "https://codeforces.com/profile/goudaabdulhmid2" },
-    { "name": "Vjudge", "url": "https://vjudge.net/user/goudaabdulhmid2" },
-    { "name": "LeetCode", "url": "https://leetcode.com/u/goudaabdulhmid2/" },
-    { "name": "ICPC Profile", "url": "https://icpc.global/ICPCID/ZU9AKLTTU0MH" }
+    {
+      "name": "Codeforces",
+      "url": "https://codeforces.com/profile/goudaabdulhmid2"
+    },
+    {
+      "name": "Vjudge",
+      "url": "https://vjudge.net/user/goudaabdulhmid2"
+    },
+    {
+      "name": "LeetCode",
+      "url": "https://leetcode.com/u/goudaabdulhmid2/"
+    },
+    {
+      "name": "ICPC Profile",
+      "url": "https://icpc.global/ICPCID/ZU9AKLTTU0MH"
+    }
   ]
 }

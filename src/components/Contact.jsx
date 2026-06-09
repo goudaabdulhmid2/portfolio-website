@@ -1,7 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const Contact = ({ personalInfo }) => {
+  const [status, setStatus] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    setStatus('submitting');
+    
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      if (response.ok) {
+        setStatus('success');
+        form.reset();
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      setStatus('error');
+    }
+  };
+
   return (
     <footer id="contact" className="footer">
       <div className="container">
@@ -16,6 +42,7 @@ const Contact = ({ personalInfo }) => {
             className="contact-form"
             action="https://formspree.io/f/xpqerjly" 
             method="POST"
+            onSubmit={handleSubmit}
           >
             <div className="form-group">
               <input type="text" name="Name" required placeholder="Name" className="form-input" />
@@ -26,9 +53,11 @@ const Contact = ({ personalInfo }) => {
             <div className="form-group">
               <textarea name="Message" required rows="5" placeholder="Message" className="form-input"></textarea>
             </div>
-            <button type="submit" className="btn-submit">
-              Send Message
+            <button type="submit" className="btn-submit" disabled={status === 'submitting'}>
+              {status === 'submitting' ? 'Sending...' : 'Send Message'}
             </button>
+            {status === 'success' && <p style={{ color: '#10b981', marginTop: '1rem', textAlign: 'center', fontWeight: '500' }}>Message sent successfully!</p>}
+            {status === 'error' && <p style={{ color: '#ef4444', marginTop: '1rem', textAlign: 'center', fontWeight: '500' }}>Oops! There was a problem submitting your form.</p>}
           </form>
 
           <div className="social-links">

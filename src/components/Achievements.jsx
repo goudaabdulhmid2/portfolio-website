@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { FaTrophy } from 'react-icons/fa';
 
 const containerVars = {
@@ -15,7 +15,21 @@ const itemVars = {
   show: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 100 } }
 };
 
+const IMAGES = [
+  `${import.meta.env.BASE_URL}Activities/ICPC Photo for me.jpg`,
+  `${import.meta.env.BASE_URL}Activities/ecpe.jpg`
+];
+
 const Achievements = ({ competitiveProgramming, competitiveProfiles }) => {
+  const [currentImg, setCurrentImg] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImg((prev) => (prev + 1) % IMAGES.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section id="achievements" className="container section-padding" style={{ paddingTop: '0' }}>
       <motion.div
@@ -90,12 +104,19 @@ const Achievements = ({ competitiveProgramming, competitiveProfiles }) => {
               border: '1px solid var(--border-color)', 
               boxShadow: '0 10px 30px rgba(0,0,0,0.5)' 
             }}>
-              <img 
-                src="/Activities/ICPC Photo for me.jpg" 
-                alt="Competitive Programming" 
-                style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 20%' }} 
-              />
-              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.5), transparent)', pointerEvents: 'none' }}></div>
+              <AnimatePresence initial={false}>
+                <motion.img 
+                  key={currentImg}
+                  src={IMAGES[currentImg]}
+                  alt="Competitive Programming" 
+                  initial={{ x: '100%' }}
+                  animate={{ x: 0 }}
+                  exit={{ x: '-100%' }}
+                  transition={{ type: 'tween', duration: 0.8, ease: 'easeInOut' }}
+                  style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 20%' }} 
+                />
+              </AnimatePresence>
+              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.5), transparent)', pointerEvents: 'none', zIndex: 10 }}></div>
             </div>
           </motion.div>
 

@@ -794,7 +794,7 @@ function SplashCursor({
   }, [])
 
   return (
-    <div style={{ position: 'fixed', top: 0, left: 0, zIndex: 0, pointerEvents: 'none', width: '100%', height: '100%' }}>
+    <div style={{ position: 'fixed', top: 0, left: 0, zIndex: 35, pointerEvents: 'none', width: '100%', height: '100%' }}>
       <canvas ref={canvasRef} id="fluid" style={{ width: '100vw', height: '100vh', display: 'block' }} />
     </div>
   )

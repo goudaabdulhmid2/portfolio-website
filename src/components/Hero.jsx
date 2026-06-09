@@ -1,15 +1,53 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import Typewriter from 'typewriter-effect';
 
 import { useTextScramble } from '../hooks/useTextScramble';
 
+const HERO_IMAGES = [
+  `${import.meta.env.BASE_URL}Activities/Icpc  Mansoura Team Cover.jpg`,
+  `${import.meta.env.BASE_URL}Activities/iti-photo.jpg`,
+  `${import.meta.env.BASE_URL}Activities/gradPhoto.jpg`
+];
+
 const Hero = ({ personalInfo }) => {
   const scrambledName = useTextScramble(personalInfo.name, { delay: 200, duration: 1200 });
+  const [bgIndex, setBgIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setBgIndex((prev) => (prev + 1) % HERO_IMAGES.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
-    <section id="hero" className="hero container">
-      <div className="hero-content">
+    <section id="hero" className="hero container" style={{ position: 'relative' }}>
+      <div style={{
+        position: 'absolute',
+        top: 0, left: '50%', transform: 'translateX(-50%)',
+        width: '100vw', height: '100%',
+        zIndex: -1,
+        overflow: 'hidden'
+      }}>
+        <AnimatePresence>
+          <motion.div
+            key={bgIndex}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.3 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
+            style={{
+              position: 'absolute', inset: 0,
+              background: `linear-gradient(to right, var(--bg-color) 20%, transparent 80%), url("${HERO_IMAGES[bgIndex]}")`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'right center',
+              backgroundRepeat: 'no-repeat',
+            }}
+          />
+        </AnimatePresence>
+      </div>
+      <div className="hero-content" style={{ position: 'relative', zIndex: 1 }}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
