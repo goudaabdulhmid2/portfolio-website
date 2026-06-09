@@ -7,10 +7,18 @@ import Contact from './components/Contact';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import About from './components/About';
+import Activities from './components/Activities';
+import Achievements from './components/Achievements';
+
+import Navbar from './components/Navbar';
+import SplashCursor from './components/SplashCursor';
+import Chatbot from './components/Chatbot';
+import TechMarquee from './components/TechMarquee';
 
 function App() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [cursorEnabled, setCursorEnabled] = useState(true);
 
   useEffect(() => {
     fetch('/portfolio-data.json')
@@ -23,6 +31,11 @@ function App() {
         console.error("Error fetching data:", error);
         setLoading(false);
       });
+
+    const savedCursor = localStorage.getItem('cursorEnabled');
+    if (savedCursor !== null) {
+      setCursorEnabled(savedCursor === 'true');
+    }
   }, []);
 
   if (loading) {
@@ -41,27 +54,27 @@ function App() {
         initial={{ opacity: 0 }} 
         animate={{ opacity: 1 }} 
         transition={{ duration: 0.5 }}
+        style={{ position: 'relative', zIndex: 1 }}
       >
-        <nav className="navbar">
-          <div className="nav-content">
-            <div className="logo">{data.personalInfo.name.split(' ')[0]}.</div>
-            <div className="nav-links">
-              <a href="#about-details" className="nav-link">About</a>
-              <a href="#experience" className="nav-link">Experience</a>
-              <a href="#projects" className="nav-link">Projects</a>
-            </div>
-          </div>
-        </nav>
+        {cursorEnabled && <SplashCursor />}
+        <Navbar name={data.personalInfo.name} cursorEnabled={cursorEnabled} setCursorEnabled={setCursorEnabled} />
 
         <main>
           <Hero personalInfo={data.personalInfo} />
           <About summary={data.summary} />
+          <TechMarquee />
           <Skills skills={data.skills} />
           <Experience experience={data.experience} education={data.education} />
           <Projects projects={data.projects} />
+          <Achievements 
+            competitiveProgramming={data.competitiveProgramming} 
+            competitiveProfiles={data.competitiveProfiles} 
+          />
+          <Activities activities={data.activities} />
         </main>
         
         <Contact personalInfo={data.personalInfo} />
+        <Chatbot data={data} />
       </motion.div>
     </AnimatePresence>
   );

@@ -14,7 +14,7 @@ const Contact = ({ personalInfo }) => {
           
           <form 
             className="contact-form"
-            action="https://www.freecontactform.com/YOUR_FORM_ENDPOINT" 
+            action="https://formspree.io/f/xpqerjly" 
             method="POST"
           >
             <div className="form-group">

@@ -169,5 +169,11 @@
   "competitiveProgramming": [
     "Participated in ECPC Qualifications twice 2022 and 2023",
     "Solved 500+ problems on Codeforces and Vjudge; also active on LeetCode"
+  ],
+  "competitiveProfiles": [
+    { "name": "Codeforces", "url": "https://codeforces.com/profile/goudaabdulhmid2" },
+    { "name": "Vjudge", "url": "https://vjudge.net/user/goudaabdulhmid2" },
+    { "name": "LeetCode", "url": "https://leetcode.com/u/goudaabdulhmid2/" },
+    { "name": "ICPC Profile", "url": "https://icpc.global/ICPCID/ZU9AKLTTU0MH" }
   ]
 }
