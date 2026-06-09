@@ -107,7 +107,7 @@ a:hover {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-color);
-  z-index: 100;
+  z-index: 40;
 }
 
 .nav-content {

@@ -50,7 +50,7 @@ const Hero = ({ personalInfo }) => {
             <a href="#projects" className="btn-primary" style={{ padding: '0.8rem 1.5rem', background: 'var(--accent)', color: '#fff', borderRadius: '0.5rem', textDecoration: 'none', fontWeight: '600' }}>
               View Work
             </a>
-            <a href="/cv.pdf" download="AbdulHamid_Gouda_CV.pdf" className="btn-secondary" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.8rem 1.5rem', border: '1px solid var(--border-color)', borderRadius: '0.5rem', color: 'var(--text-primary)', textDecoration: 'none', fontWeight: '500' }}>
+            <a href={`${import.meta.env.BASE_URL}cv.pdf`} download="AbdulHamid_Gouda_CV.pdf" className="btn-secondary" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.8rem 1.5rem', border: '1px solid var(--border-color)', borderRadius: '0.5rem', color: 'var(--text-primary)', textDecoration: 'none', fontWeight: '500' }}>
               <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
               Download CV
             </a>
