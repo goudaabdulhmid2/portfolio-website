@@ -6,8 +6,7 @@ import { useTextScramble } from '../hooks/useTextScramble';
 
 const HERO_IMAGES = [
   `${import.meta.env.BASE_URL}Activities/Icpc  Mansoura Team Cover.jpg`,
-  `${import.meta.env.BASE_URL}Activities/iti-photo.jpg`,
-  `${import.meta.env.BASE_URL}Activities/gradPhoto.jpg`
+  `${import.meta.env.BASE_URL}Activities/iti-photo.jpg`
 ];
 
 const Hero = ({ personalInfo }) => {

@@ -678,10 +678,8 @@ function SplashCursor({
     }
 
     function generateColor() {
-      if (!config.RAINBOW_MODE) return hexToRGB(config.COLOR)
-      let c = HSVtoRGB(Math.random(), 1.0, 1.0)
-      c.r *= 0.15; c.g *= 0.15; c.b *= 0.15
-      return c
+      let accentHex = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || '#8b5cf6';
+      return hexToRGB(accentHex);
     }
 
     function HSVtoRGB(h, s, v) {
