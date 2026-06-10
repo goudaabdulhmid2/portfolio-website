@@ -593,7 +593,14 @@ a:hover {
 }
 
 /* Mobile Adjustments */
+.hero-bg {
+  background-position: right center !important;
+}
+
 @media (max-width: 768px) {
+  .hero-bg {
+    background-position: center !important;
+  }
   .hero h1 { font-size: 2.5rem; }
   .section-padding { padding: 4rem 0; }
   .projects-grid { grid-template-columns: 1fr; }

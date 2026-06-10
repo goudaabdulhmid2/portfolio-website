@@ -89,9 +89,11 @@ const Experience = ({ experience, education }) => {
                   key={`exp-${idx}`} 
                   variants={itemVars} 
                   className="timeline-creative-item"
-                  onMouseEnter={() => { if(img) setBgImage(img); }}
-                  onMouseLeave={() => setBgImage(null)}
-                  onTouchStart={() => { if(img) setBgImage(img); }}
+                  onMouseEnter={() => { if (window.innerWidth > 768 && img) setBgImage(img); }}
+                  onMouseLeave={() => { if (window.innerWidth > 768) setBgImage(null); }}
+                  onTouchStart={() => { if (window.innerWidth > 768 && img) setBgImage(img); }}
+                  onViewportEnter={() => { if (window.innerWidth <= 768 && img) setBgImage(img); }}
+                  viewport={{ amount: 0.5, margin: "-20% 0px -20% 0px" }}
                 >
                   <div className="timeline-icon-node experience-node">
                     <FaBriefcase />
@@ -119,9 +121,11 @@ const Experience = ({ experience, education }) => {
                   key={`edu-${idx}`} 
                   variants={itemVars} 
                   className="timeline-creative-item"
-                  onMouseEnter={() => { if(img) setBgImage(img); }}
-                  onMouseLeave={() => setBgImage(null)}
-                  onTouchStart={() => { if(img) setBgImage(img); }}
+                  onMouseEnter={() => { if (window.innerWidth > 768 && img) setBgImage(img); }}
+                  onMouseLeave={() => { if (window.innerWidth > 768) setBgImage(null); }}
+                  onTouchStart={() => { if (window.innerWidth > 768 && img) setBgImage(img); }}
+                  onViewportEnter={() => { if (window.innerWidth <= 768 && img) setBgImage(img); }}
+                  viewport={{ amount: 0.5, margin: "-20% 0px -20% 0px" }}
                 >
                   <div className="timeline-icon-node education-node">
                     <FaGraduationCap />

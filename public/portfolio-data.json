@@ -22,20 +22,15 @@
     "Backend": [
       "Node.js",
       "Express.js",
-      "NestJS",
       "Django",
       "Laravel",
-      "RESTful APIs",
-      "GraphQL"
+      "RESTful APIs"
     ],
     "Frontend": [
       "HTML",
       "CSS",
       "Tailwind CSS",
       "Bootstrap",
-      "Vue.js",
-      "React",
-      "Next.js",
       "Angular"
     ],
     "Databases and ORMs": [

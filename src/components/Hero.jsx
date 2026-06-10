@@ -36,11 +36,11 @@ const Hero = ({ personalInfo }) => {
             animate={{ opacity: 0.3 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1.5, ease: "easeInOut" }}
+            className="hero-bg"
             style={{
               position: 'absolute', inset: 0,
               background: `linear-gradient(to right, var(--bg-color) 20%, transparent 80%), url("${HERO_IMAGES[bgIndex]}")`,
               backgroundSize: 'cover',
-              backgroundPosition: 'right center',
               backgroundRepeat: 'no-repeat',
             }}
           />

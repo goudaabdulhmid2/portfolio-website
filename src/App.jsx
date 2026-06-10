@@ -38,13 +38,7 @@ function App() {
     }
   }, []);
 
-  if (loading) {
-    return (
-      <div style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-secondary)' }}>
-        Loading portfolio...
-      </div>
-    );
-  }
+  if (loading) return null;
 
   if (!data) return <div>Failed to load data.</div>;
 
