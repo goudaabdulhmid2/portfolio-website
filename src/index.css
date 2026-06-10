@@ -643,6 +643,14 @@ a:hover {
   .hero-subtitle {
     font-size: 1.1rem !important;
   }
+  .hero-cta {
+    flex-direction: column !important;
+    width: 100%;
+  }
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
   .section-title {
     font-size: 2rem !important;
   }
